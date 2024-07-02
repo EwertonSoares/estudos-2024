@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <!-- Tags -->
+    <body>
+        <head>
+            <!-- Estilo da pagina -->
+            <style> 
+                body {
+                    background-color: lightgray;
+                    margin: 0;
+                }
+                h1 {
+                    background-color: lightblue;
+                    color: blue;
+                    text-align: center;
+                    padding: 10px;
+                    margin: 0;
+                }
+                #container {
+                    width: 500px;
+                    height: 170px;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    border: solid 1px;
+                    background-color: lightblue;
+                }
+                .form {
+                    text-align: center;
+                    margin-top: 12px;
+                    font-size: 20px;
+                }
+                input {
+                    border-radius: 10px;
+                    width: 200px;
+                    height: 20px;
+                    font-size: 14px;
+                    padding-left: 10px;
+                }
+                #divButton button {
+                    width: 200px;
+                    height: 30px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+                #divButton button:hover {
+                    background-color: black;
+                    color: white;
+                }
+            </style>
+
+            <script>
+                function neidys() {
+                    let operador = document.getElementById('inputOperador').value
+                    let valorUm = document.getElementById('inputValorUm').value
+                    let valorDois = document.getElementById('inputValorDois').value
+                    let resultado = 0
+
+                    if(operador == '+') {
+                        resultado = parseInt(valorUm) + parseInt(valorDois)
+                    }
+
+                    if(operador == '-') {
+                        resultado = parseInt(valorUm) - parseInt(valorDois)
+                    }
+
+                    if(operador == 'x') {
+                        resultado = parseInt(valorUm) * parseInt(valorDois)
+                    }
+
+                    if(operador == '/') {
+                        resultado = parseInt(valorUm) / parseInt(valorDois)
+                    }
+
+                    alert(`O RESULTADO DE ${valorUm} ${operador} ${valorDois} É: ${resultado}`)
+                }
+            </script>
+
+            <title>Pagina de teste</title>
+            <h1>Pagina inicial da Neidys</h1>
+        </head>
+        
+        <div id="container">
+            <div class="form">
+                <label>Digite o primeiro valor: </label>
+                <input type="text" id="inputValorUm" style="margin-left: 40px;"></input>
+            </div>
+            <div class="form">
+                <label>Digite o segundo valor: </label>
+                <input type="text" id="inputValorDois" style="margin-left: 40px;"></input>
+            </div>
+            <div class="form">
+                <label>Digite o operador (-, +, x, /): </label>
+                <input type="text" id="inputOperador"></input>
+            </div>
+
+            <div class="form" id="divButton">
+                <button onclick="neidys()">Calcular</button>
+            </div>
+
+        </div>
+
+    </body>
+</html>

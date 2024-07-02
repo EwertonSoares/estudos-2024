@@ -1,0 +1,28 @@
+// Observações sobre o package.json
+{
+  "name": "funcionarios",
+  "version": "1.0.0",
+  /* Por padrão o arquivo main é nomeado como index.js, mas você pode 
+  alterar o arquiv main para quaçquer um que você quer que seja o 
+  arquivo que vai iniciar a execução da sua aplicação. */ 
+  "main": "main.js",
+  "scripts": {
+    /* Na apropriedade start sera executado o nodemon, basta executar 
+    o comando npm start */
+    "start": "nodemon",
+    /* A propriedade dev tambem dispara o nodemon, basta executar o 
+    cmando npm run dev */
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}
+
+/* Executando o comando npm i, a pasta nodemodules e as 
+dependencias da sua aplicação são baixadas. */
